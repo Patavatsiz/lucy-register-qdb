@@ -1,0 +1,45 @@
+{
+  "Register": {
+    "registerStaff": ["", ""],
+    "RolesARL": [""],
+    "erkekRolleri": ["", ""],
+    "kadinRolleri": ["", ""],
+    "Booster": "",
+    "Şüpheli": "",
+    "Vip": "",
+    "BotRol": "",
+    "Kayitsiz": "",
+    "Tag": "",
+    "Untag": "",
+    "TagRol": "",
+    "KayıtKanal": "",
+    "Kurallar": "",
+    "Jail": ""
+  },
+
+  "Event": {
+    "Musician": "",
+    "Developer": "",
+    "Artist": "",
+    "Rapper": "",
+    "Writer": ""
+  },
+
+
+  "Embed": {
+    "Footer": "Lucy ❤️ Lucy",
+    "BotStatus": "Lucy was here"
+  },
+
+  "Emoji": {
+    "Cross": "❌",
+    "Check": "✅"
+  },
+
+  "sunucuID": "",
+
+  "botToken": "",
+  "botPrefix": ".",
+  "botOwner": "",
+  "botVoice": ""
+} 
