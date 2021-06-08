@@ -22,6 +22,11 @@ module.exports = {
    let uye = message.mentions.members.first() || message.guild.members.cache.get(args[1]);
    if(!uye || uye.id === message.author.id || uye.roles.highest.position >= message.member.roles.highest.position || uye.id === message.guild.OwnerID || uye.bot) return embed("Hata: Bu kullanıcıya rol veremezsin veya bir kullanıcı belirtmedin!")
 
+    function xembed(msg) {
+    let embed = new MessageEmbed().setColor("RANDOM").setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setFooter(value.Embed.Footer).setTimestamp().setDescription(msg).setThumbnail(uye.user.avatarURL({dynamic: true}))
+    message.channel.send(embed)
+  }
+    
 if(args[0] === "log") {
     let data = patavatsizDatabase.rolCek(uye)
     data = data.reverse()
@@ -29,11 +34,6 @@ if(args[0] === "log") {
     let roles = data.length > "0" ? data.map(x => `${x.Push}`).slice(0, 10).join("\n") : ""
     xembed(`${uye} (${uye.roles.highest}) kişisinin toplamda ${nums} rol bilgisi bulundu ve son 10 rol bilgisi aşağıda sıralandı;\n\n${roles}`)
    }
-
-    function xembed(msg) {
-    let embed = new MessageEmbed().setColor("RANDOM").setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setFooter(value.Embed.Footer).setTimestamp().setDescription(msg).setThumbnail(uye.user.avatarURL({dynamic: true}))
-    message.channel.send(embed)
-  }
 
   let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[2]);
   if(!role && args[0] !== "log") return embed("Hata: Bir rol belirtin!")
