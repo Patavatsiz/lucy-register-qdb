@@ -88,16 +88,9 @@ Hesabın **${moment(member.user.createdAt).locale("tr").format("LLL")}** tarihin
     await member.roles.add(value.Register.Şüpheli)
     await client.channels.cache.get(value.Register.KayıtKanal).send(new Discord.MessageEmbed().setColor("RED").setAuthor(member.user.username, member.user.avatarURL({ dynamic: true })).setThumbnail(member.user.avatarURL({ dynamic: true })).setFooter(value.Embed.Footer).setTimestamp().setDescription(`
 ${member} sunucuya katıldı fakat hesabı **${moment(member.user.createdAt).locale("tr").format("LLL")}** tarihinde \`(${client.tarihHesapla(member.user.createdAt)})\` açıldığı için <@&${value.Register.Şüpheli}> rolü verildi.`))
-  } else if (!member.user.bot && kontrol === "güvenli") {
-    member.roles.add(value.Register.Jail)
-    member.roles.remove(value.Register.Kayitsiz)
-  } else if (!member.user.bot && kontrol === "şüpheli") {
-    member.roles.add(value.Register.Jail)
-   member.roles.add(value.Register.Şüpheli)
-    member.roles.remove(value.Register.Kayitsiz)
   } else if (member.user.bot) {
     await member.roles.add(value.Register.BotRol)
-    member.roles.remove(value.Register.Kayitsiz)
+    await member.roles.remove(value.Register.Kayitsiz)
   }
 });
 
