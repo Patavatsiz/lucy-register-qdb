@@ -8,7 +8,7 @@ module.exports = {
   run: async(client, message, args) => {
 
     function embed(msg) {
-    let embed = new MessageEmbed().setColor("RANDOM").setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setFooter(value.Embed.Footer).setTimestamp().setDescription(msg).setThumbnail()
+    let embed = new MessageEmbed().setColor("RANDOM").setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setFooter(value.Embed.Footer).setTimestamp().setDescription(msg)
     message.channel.send(embed).s(10)
   }
 
