@@ -1,5 +1,5 @@
 {
-  "name": "patavatsiz-vocuher",
+  "name": "patavatsiz-register",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "node ."
   },
   "author": "Patavatsiz",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^12.5.3",
     "fs": "0.0.1-security",
